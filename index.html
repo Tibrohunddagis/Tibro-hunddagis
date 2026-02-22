@@ -5,95 +5,116 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Exklusivt Hundcenter</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 
 <style>
-body {
-    margin:0;
-    font-family:'Inter', sans-serif;
-    background:#f8f6f2;
-    color:#1a1a1a;
+body{
+margin:0;
+font-family:'Inter',sans-serif;
+background:#f5f3ef;
+color:#1c1c1c;
 }
 
-header {
-    background:#111;
-    color:white;
-    padding:30px;
-    text-align:center;
-    font-family:'Playfair Display', serif;
-    font-size:32px;
-    letter-spacing:1px;
+header{
+background:#111;
+color:white;
+padding:40px;
+text-align:center;
+font-family:'Playfair Display',serif;
+font-size:34px;
+letter-spacing:1px;
 }
 
-section {
-    padding:80px 20px;
-    max-width:1100px;
-    margin:auto;
+nav{
+display:flex;
+justify-content:center;
+gap:40px;
+background:white;
+padding:20px;
+box-shadow:0 4px 20px rgba(0,0,0,0.05);
 }
 
-h2 {
-    font-family:'Playfair Display', serif;
-    font-size:34px;
-    margin-bottom:20px;
+nav a{
+text-decoration:none;
+color:#111;
+font-weight:500;
+cursor:pointer;
 }
 
-.card {
-    background:white;
-    padding:50px;
-    border-radius:16px;
-    box-shadow:0 15px 40px rgba(0,0,0,0.08);
-    margin-bottom:60px;
+section{
+max-width:1100px;
+margin:80px auto;
+padding:0 20px;
+display:none;
 }
 
-.price {
-    font-size:26px;
-    font-weight:600;
-    margin-top:15px;
+section.active{
+display:block;
 }
 
-.premium {
-    background:#111;
-    color:white;
+.card{
+background:white;
+padding:50px;
+border-radius:18px;
+box-shadow:0 20px 50px rgba(0,0,0,0.08);
 }
 
-.premium .price {
-    color:#d4af37;
+h2{
+font-family:'Playfair Display',serif;
+font-size:32px;
+margin-bottom:20px;
 }
 
-footer {
-    background:#111;
-    color:white;
-    padding:40px;
-    text-align:center;
+.price{
+font-size:22px;
+font-weight:600;
+margin:15px 0;
 }
 
-a {
-    color:#d4af37;
-    text-decoration:none;
+footer{
+background:#111;
+color:white;
+padding:50px 20px;
+text-align:center;
 }
 
-.social a {
-    margin:0 15px;
-    font-size:18px;
+.social a{
+color:#d4af37;
+margin:0 15px;
+font-weight:500;
+text-decoration:none;
 }
 
-button {
-    background:#d4af37;
-    border:none;
-    padding:14px 28px;
-    font-weight:600;
-    cursor:pointer;
-    border-radius:30px;
+iframe{
+border-radius:16px;
+width:100%;
 }
 
-form input, form textarea {
-    width:100%;
-    padding:12px;
-    margin-bottom:15px;
-    border-radius:8px;
-    border:1px solid #ccc;
+form input, form textarea{
+width:100%;
+padding:12px;
+margin-bottom:15px;
+border-radius:10px;
+border:1px solid #ccc;
+}
+
+button{
+background:#d4af37;
+border:none;
+padding:14px 28px;
+border-radius:30px;
+font-weight:600;
+cursor:pointer;
 }
 </style>
+
+<script>
+function showTab(id){
+document.querySelectorAll("section").forEach(sec=>sec.classList.remove("active"));
+document.getElementById(id).classList.add("active");
+}
+</script>
+
 </head>
 
 <body>
@@ -102,69 +123,47 @@ form input, form textarea {
 Exklusivt Hundcenter
 </header>
 
-<section>
+<nav>
+<a onclick="showTab('dagis')">Hunddagis</a>
+<a onclick="showTab('premium')">Premium Aktivering</a>
+<a onclick="showTab('pensionat')">Pensionat</a>
+<a onclick="showTab('kontakt')">Kontakt</a>
+</nav>
 
+<section id="dagis" class="active">
 <div class="card">
 <h2>Hunddagis</h2>
-<p>Strukturerad daglig omsorg med aktivering, vila och trygg miljö.</p>
+<p>Strukturerad daglig omsorg med aktivering och vila i trygg miljö.</p>
 <div class="price">Från 3 200 kr / månad</div>
 </div>
+</section>
 
-<div class="card premium">
+<section id="premium">
+<div class="card">
 <h2>Premium Aktivering</h2>
-<p>Individanpassad mental och fysisk stimulans med fokus på utveckling och balans.</p>
+<p>Individanpassad fysisk och mental stimulans på hög nivå.</p>
 <div class="price">650 kr / tillfälle</div>
 </div>
+</section>
 
+<section id="pensionat">
 <div class="card">
 <h2>Pensionat</h2>
 
-<p>Trygg och lugn vistelse med struktur och kvalitet.</p>
+<div class="price">400 kr / dag</div>
+<p>Ankomstdag och hemgångsdag räknas som hela dagar.</p>
 
-<div class="price">
-400 kr / dag<br>
-Ankomstdag och hemgångsdag räknas som hela dagar.
-</div>
+<div class="price">Lör & Sön: 600 kr / dag</div>
 
-<br>
+<div class="price">Aftnar & röda dagar: +400 kr / dag</div>
 
-<div class="price">
-Lör & Sön: 600 kr / dag
-</div>
-
-<br>
-
-<div class="price">
-Aftnar & röda dagar: +400 kr / dag
-</div>
-
-<br>
-
-<div class="price">
-Uthämtning utanför ordinarie tider: +300 kr
-</div>
+<div class="price">Uthämtning utanför tider: +300 kr</div>
 
 </div>
-
 </section>
 
-<section>
-<h2>Följ oss</h2>
-
-<div class="social">
-<a href="https://www.facebook.com/" target="_blank">Facebook</a>
-<a href="https://www.instagram.com/" target="_blank">Instagram</a>
-</div>
-
-<br><br>
-
-<!-- Instagram Feed -->
-<script src="https://elfsightcdn.com/platform.js" async></script>
-<div class="elfsight-app-REPLACE_WITH_YOUR_WIDGET_ID"></div>
-
-</section>
-
-<section>
+<section id="kontakt">
+<div class="card">
 <h2>Kontakta oss</h2>
 
 <form action="https://formspree.io/f/mnjbgrqb" method="POST">
@@ -174,6 +173,33 @@ Uthämtning utanför ordinarie tider: +300 kr
 <button type="submit">Skicka</button>
 </form>
 
+<br><br>
+
+<h2>Hitta hit</h2>
+
+<iframe 
+src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d0!2d0!3d0" 
+height="350" 
+allowfullscreen="" 
+loading="lazy">
+</iframe>
+
+<br><br>
+
+<h2>Följ oss</h2>
+
+<div class="social">
+<a href="https://www.facebook.com/" target="_blank">Facebook</a>
+<a href="https://www.instagram.com/" target="_blank">Instagram</a>
+</div>
+
+<br><br>
+
+<!-- Instagram Embed -->
+<script src="https://elfsightcdn.com/platform.js" async></script>
+<div class="elfsight-app-REPLACE_WITH_WIDGET_ID"></div>
+
+</div>
 </section>
 
 <footer>
