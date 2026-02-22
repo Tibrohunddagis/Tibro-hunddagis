@@ -1,210 +1,196 @@
 <!DOCTYPE html>
 <html lang="sv">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Exklusivt Hundcenter</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<title>Tibro Hunddagis | Premium Hunddagis & Pensionat</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
 
 <style>
+
 body{
 margin:0;
-font-family:'Inter',sans-serif;
+font-family:Poppins;
 background:#f5f3ef;
-color:#1c1c1c;
+color:#2d2d2d;
 }
 
 header{
-background:#111;
+background:linear-gradient(rgba(0,0,0,0.55),rgba(0,0,0,0.55)),
+url('https://images.unsplash.com/photo-1548199973-03cce0bbc87b') center/cover;
 color:white;
-padding:40px;
 text-align:center;
-font-family:'Playfair Display',serif;
-font-size:34px;
-letter-spacing:1px;
+padding:130px 20px;
+}
+
+header h1{
+font-family:Playfair Display;
+font-size:52px;
 }
 
 nav{
-display:flex;
-justify-content:center;
-gap:40px;
-background:white;
-padding:20px;
-box-shadow:0 4px 20px rgba(0,0,0,0.05);
+background:#1f2c23;
+padding:18px;
+text-align:center;
+position:sticky;
+top:0;
+z-index:1000;
 }
 
 nav a{
+color:white;
+margin:20px;
 text-decoration:none;
-color:#111;
 font-weight:500;
-cursor:pointer;
 }
 
 section{
 max-width:1100px;
-margin:80px auto;
-padding:0 20px;
-display:none;
-}
-
-section.active{
-display:block;
+margin:auto;
+padding:80px 20px;
 }
 
 .card{
 background:white;
-padding:50px;
-border-radius:18px;
-box-shadow:0 20px 50px rgba(0,0,0,0.08);
+padding:40px;
+border-radius:25px;
+box-shadow:0 20px 60px rgba(0,0,0,0.06);
+margin-bottom:50px;
 }
 
 h2{
-font-family:'Playfair Display',serif;
-font-size:32px;
-margin-bottom:20px;
-}
-
-.price{
-font-size:22px;
-font-weight:600;
-margin:15px 0;
-}
-
-footer{
-background:#111;
-color:white;
-padding:50px 20px;
+font-family:Playfair Display;
+font-size:38px;
 text-align:center;
 }
 
-.social a{
-color:#d4af37;
-margin:0 15px;
+h3{
+margin-top:0;
+}
+
+.price{
+font-size:20px;
 font-weight:500;
-text-decoration:none;
+margin-top:20px;
+line-height:1.8;
 }
 
-iframe{
-border-radius:16px;
+input,textarea{
 width:100%;
-}
-
-form input, form textarea{
-width:100%;
-padding:12px;
-margin-bottom:15px;
-border-radius:10px;
-border:1px solid #ccc;
+padding:15px;
+margin:10px 0;
+border-radius:12px;
+border:1px solid #ddd;
 }
 
 button{
-background:#d4af37;
+background:#6b8f71;
+color:white;
 border:none;
-padding:14px 28px;
-border-radius:30px;
-font-weight:600;
+padding:18px;
+width:100%;
+border-radius:35px;
+font-size:16px;
 cursor:pointer;
 }
-</style>
 
-<script>
-function showTab(id){
-document.querySelectorAll("section").forEach(sec=>sec.classList.remove("active"));
-document.getElementById(id).classList.add("active");
+button:hover{
+opacity:0.9;
 }
-</script>
+
+footer{
+background:#1f2c23;
+color:white;
+text-align:center;
+padding:50px;
+margin-top:80px;
+}
+
+.social{
+color:#2f3e34;
+text-decoration:none;
+font-weight:600;
+margin-right:20px;
+}
+
+.review{
+background:#fafafa;
+padding:25px;
+border-radius:18px;
+margin-bottom:20px;
+}
+
+iframe{
+border-radius:20px;
+width:100%;
+}
+
+</style>
 
 </head>
 
 <body>
 
 <header>
-Exklusivt Hundcenter
+<h1>Tibro Hunddagis</h1>
+<p>Lantligt premiumhunddagis – där hunden får vara hund</p>
 </header>
 
 <nav>
-<a onclick="showTab('dagis')">Hunddagis</a>
-<a onclick="showTab('premium')">Premium Aktivering</a>
-<a onclick="showTab('pensionat')">Pensionat</a>
-<a onclick="showTab('kontakt')">Kontakt</a>
+<a href="#om">Om oss</a>
+<a href="#tjanster">Tjänster & Priser</a>
+<a href="#kontakt">Kontakt</a>
 </nav>
 
-<section id="dagis" class="active">
+<section id="om">
+
+<h2>Om oss</h2>
+
 <div class="card">
-<h2>Hunddagis</h2>
-<p>Strukturerad daglig omsorg med aktivering och vila i trygg miljö.</p>
-<div class="price">Från 3 200 kr / månad</div>
-</div>
-</section>
 
-<section id="premium">
-<div class="card">
-<h2>Premium Aktivering</h2>
-<p>Individanpassad fysisk och mental stimulans på hög nivå.</p>
-<div class="price">650 kr / tillfälle</div>
-</div>
-</section>
+<p>
+Vi arbetar med hundens naturliga behov i fokus. Här får hunden springa fritt, nosa, leka, gräva och landa i en trygg lantlig miljö.
+</p>
 
-<section id="pensionat">
-<div class="card">
-<h2>Pensionat</h2>
-
-<div class="price">400 kr / dag</div>
-<p>Ankomstdag och hemgångsdag räknas som hela dagar.</p>
-
-<div class="price">Lör & Sön: 600 kr / dag</div>
-
-<div class="price">Aftnar & röda dagar: +400 kr / dag</div>
-
-<div class="price">Uthämtning utanför tider: +300 kr</div>
+<p>
+Verksamheten drivs med struktur, kvalitet och tydliga rutiner – för dig som vill ha mer än bara förvaring.
+</p>
 
 </div>
 </section>
 
-<section id="kontakt">
+<section id="tjanster">
+
+<h2>Tjänster & Priser</h2>
+
 <div class="card">
-<h2>Kontakta oss</h2>
 
-<form action="https://formspree.io/f/mnjbgrqb" method="POST">
-<input type="text" name="name" placeholder="Namn" required>
-<input type="email" name="email" placeholder="E-post" required>
-<textarea name="message" rows="5" placeholder="Meddelande" required></textarea>
-<button type="submit">Skicka</button>
-</form>
+<h3>🐾 Hunddagis</h3>
 
-<br><br>
+<p>Strukturerad omsorg, promenader, aktivering och vila i harmonisk miljö.</p>
 
-<h2>Hitta hit</h2>
-
-<iframe 
-src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d0!2d0!3d0" 
-height="350" 
-allowfullscreen="" 
-loading="lazy">
-</iframe>
-
-<br><br>
-
-<h2>Följ oss</h2>
-
-<div class="social">
-<a href="https://www.facebook.com/" target="_blank">Facebook</a>
-<a href="https://www.instagram.com/" target="_blank">Instagram</a>
+<div class="price">
+5 dagar/vecka – 3400 kr<br>
+4 dagar/vecka – 3100 kr<br>
+3 dagar/vecka – 2800 kr<br>
+2 dagar/vecka – 2500 kr
 </div>
 
-<br><br>
+<hr>
 
-<!-- Instagram Embed -->
-<script src="https://elfsightcdn.com/platform.js" async></script>
-<div class="elfsight-app-REPLACE_WITH_WIDGET_ID"></div>
+<h3>🚗 Premium hämtning & aktivering</h3>
 
+<p>Hemhämtning och aktivering i större naturområden med fri rörelse.</p>
+
+<div class="price">
+5900 kr / månad (upp till 5 vardagar/vecka)
 </div>
-</section>
 
-<footer>
-© 2026 Exklusivt Hundcenter
-</footer>
+<hr>
 
-</body>
-</html>
+<h3>🏨 Pensionat</h3>
+
+<p>Trygg vist
