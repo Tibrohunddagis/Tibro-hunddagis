@@ -5,7 +5,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Tibro Hunddagis | Lantligt Premium Hunddagis</title>
+<title>Tibro Hunddagis | Premium Hunddagis</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
 
@@ -14,20 +14,21 @@
 body{
 margin:0;
 font-family:Poppins;
-background:#f7f5f2;
+background:#f5f3ef;
 color:#2d2d2d;
 }
 
 header{
-background:#2f3e34;
+background:linear-gradient(rgba(0,0,0,0.55),rgba(0,0,0,0.55)),
+url('https://images.unsplash.com/photo-1548199973-03cce0bbc87b') center/cover;
 color:white;
-padding:110px 20px;
 text-align:center;
+padding:130px 20px;
 }
 
 header h1{
 font-family:Playfair Display;
-font-size:50px;
+font-size:52px;
 }
 
 nav{
@@ -40,8 +41,8 @@ top:0;
 
 nav a{
 color:white;
-text-decoration:none;
 margin:20px;
+text-decoration:none;
 font-weight:500;
 }
 
@@ -53,10 +54,30 @@ padding:80px 20px;
 
 .card{
 background:white;
-padding:35px;
-border-radius:20px;
-box-shadow:0 15px 40px rgba(0,0,0,0.05);
-margin-bottom:40px;
+padding:40px;
+border-radius:25px;
+box-shadow:0 20px 60px rgba(0,0,0,0.06);
+margin-bottom:50px;
+}
+
+h2{
+font-family:Playfair Display;
+font-size:38px;
+text-align:center;
+}
+
+.price{
+font-size:20px;
+font-weight:500;
+margin-top:20px;
+}
+
+input,textarea{
+width:100%;
+padding:15px;
+margin:10px 0;
+border-radius:12px;
+border:1px solid #ddd;
 }
 
 button{
@@ -65,17 +86,9 @@ color:white;
 border:none;
 padding:18px;
 width:100%;
-border-radius:30px;
+border-radius:35px;
 font-size:16px;
 cursor:pointer;
-}
-
-input,textarea{
-width:100%;
-padding:15px;
-margin:10px 0;
-border-radius:10px;
-border:1px solid #ddd;
 }
 
 footer{
@@ -86,11 +99,15 @@ padding:50px;
 margin-top:80px;
 }
 
-a.social{
+.social{
 color:#2f3e34;
 text-decoration:none;
 font-weight:600;
 margin-right:20px;
+}
+
+iframe{
+border-radius:20px;
 }
 
 </style>
@@ -106,7 +123,7 @@ margin-right:20px;
 
 <nav>
 <a href="#om">Om oss</a>
-<a href="#tjanster">Tjänster</a>
+<a href="#tjanster">Tjänster & Priser</a>
 <a href="#kontakt">Kontakt</a>
 </nav>
 
@@ -118,70 +135,88 @@ margin-right:20px;
 <div class="card">
 
 <p>
-Vi tror på att främja hundens naturliga beteenden.  
-Här får hunden möjlighet att:
+Vi tror på att främja hundens naturliga beteenden.
+Här får hunden möjlighet att gräva, leka, springa fritt, nosa och utforska i en lugn lantlig miljö.
 </p>
 
-<ul>
-<li>Gräva</li>
-<li>Leka</li>
-<li>Springa fritt på stora områden</li>
-<li>Nosa och utforska</li>
-<li>Vistas i lugn lantlig miljö</li>
-</ul>
-
 <p>
-Vi erbjuder flera tjänster – hunddagis, pensionat och hämtning hemma.  
+Vi erbjuder flera tjänster – hunddagis, pensionat och hämtning hemma.
 Klicka på tjänster för att läsa mer.
 </p>
 
 </div>
-
 </section>
 
 <!-- TJÄNSTER -->
 <section id="tjanster">
 
-<h2>Våra tjänster</h2>
+<h2>Tjänster & Priser</h2>
 
 <div class="card">
 
 <h3>🐾 Hunddagis</h3>
 
 <p>
-Strukturerad omsorg med promenader, social aktivering och vila i hemlik miljö.
+Strukturerad omsorg, promenader, social aktivering och vila.
 </p>
 
-<p>
-✔ Löptikar accepteras  
-❌ Okastrerade hanhundar accepteras inte på dagis eller hemrastning  
-✔ Hundar ska vara vaccinerade och försäkrade  
-✔ Vi har ansvarsförsäkring  
-✔ Tillstånd finns för transport av hundar  
-</p>
+<div class="price">
+5 dagar/vecka – 3400 kr<br>
+4 dagar/vecka – 3100 kr<br>
+3 dagar/vecka – 2800 kr<br>
+2 dagar/vecka – 2500 kr
+</div>
+
+<hr>
 
 <h3>🚗 Premium hämtning & aktivering</h3>
 
 <p>
 Hemhämtning enligt överenskommelse.  
-Vi hämtar din hund och kör till områden där de kan springa fritt och leka.
+Hundarna körs till stora områden där de kan springa fritt.
 </p>
 
-<p>Pris: 5900 kr / månad (max 5 vardagar/vecka)</p>
+<div class="price">
+5900 kr / månad (max 5 vardagar/vecka)
+</div>
+
+<hr>
 
 <h3>🏨 Pensionat</h3>
 
 <p>
-Pensionat erbjuds helger och lov.  
-Vi tar även emot okastrerade hanhundar på pensionat.
+Pensionat erbjuds helger och lov.
 </p>
 
-<h3>🎆 Nyårsservice</h3>
+<div class="price">
+400 kr / dag<br>
+Lördag & Söndag: 600 kr / dag<br>
+Aftnar och röda dagar: +400 kr / dag extra<br>
+Utanför öppettider: +300 kr
+</div>
+
+<hr>
 
 <p>
-Vi erbjuder trygg vistelse för hundar som inte uppskattar raketer.
+✔ Löptikar accepteras  
+❌ Okastrerade hanhundar på dagis/hemrastning ej tillåtna  
+✔ Okastrerade hanhundar accepteras på pensionat  
+✔ Hundar ska vara vaccinerade och försäkrade  
+✔ Ansvarsförsäkring finns  
+✔ Tillstånd för transport av hundar
 </p>
 
+</div>
+</section>
+
+<!-- INSTAGRAM -->
+<section>
+
+<h2>Vår vardag</h2>
+
+<div class="card">
+<iframe src="https://www.instagram.com/tibrohunddagis/embed"
+width="100%" height="500"></iframe>
 </div>
 
 </section>
@@ -209,9 +244,8 @@ Vi erbjuder trygg vistelse för hundar som inte uppskattar raketer.
 
 <div class="card">
 <p>
-Facebook: <a class="social" href="https://facebook.com/tibrohunddagis" target="_blank">Tibro Hunddagis</a><br>
-Instagram: <a class="social" href="https://instagram.com/tibrohunddagis" target="_blank">@tibrohunddagis</a><br>
-Mail: tibrohunddagis@hotmail.com
+<a class="social" href="https://facebook.com/tibrohunddagis" target="_blank">Facebook</a>
+<a class="social" href="https://instagram.com/tibrohunddagis" target="_blank">Instagram</a>
 </p>
 </div>
 
