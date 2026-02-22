@@ -10,13 +10,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
 
 <style>
-
-body{
-margin:0;
-font-family:Poppins;
-background:#f5f3ef;
-color:#2d2d2d;
-}
+body{margin:0;font-family:Poppins;background:#f5f3ef;color:#2d2d2d;}
 
 header{
 background:linear-gradient(rgba(0,0,0,0.45),rgba(0,0,0,0.45)),
@@ -51,7 +45,7 @@ font-weight:500;
 section{
 max-width:1100px;
 margin:auto;
-padding:50px 20px; /* MINSKAT AVSTÅND MELLAN SECTIONS */
+padding:50px 20px;
 }
 
 .card{
@@ -70,7 +64,7 @@ margin-bottom:30px;
 }
 
 h3{
-font-size:28px; /* STÖRRE RUBRIKER UNDER TJÄNSTER */
+font-size:28px;
 }
 
 .price{
@@ -89,13 +83,6 @@ border-radius:12px;
 border:1px solid #ddd;
 }
 
-.checkbox-row{
-display:flex;
-align-items:center;
-gap:10px;
-flex-wrap:wrap; /* FIX FÖR MOBIL */
-}
-
 button{
 background:#6b8f71;
 color:white;
@@ -112,7 +99,7 @@ background:#1f2c23;
 color:white;
 text-align:center;
 padding:50px;
-margin-top:50px; /* MINSKAT MELLANRUM */
+margin-top:50px;
 }
 
 .social{
@@ -126,7 +113,6 @@ iframe{
 border-radius:20px;
 width:100%;
 }
-
 </style>
 
 </head>
@@ -193,7 +179,7 @@ På gården finns även katter och höns.
 
 <h3>🐾 Hunddagis</h3>
 
-<p class="price">
+<p>
 Mån–Fre schema:<br>
 06-10 Lämning<br>
 10-12 Rastning<br>
@@ -203,7 +189,7 @@ Mån–Fre schema:<br>
 </p>
 
 <p>
-Gruppindelning finns för små respektive större hundar.
+Gruppindelning finns för små och stora hundar.
 </p>
 
 <p>❌ Inga okastrerade hanhundar.</p>
@@ -218,11 +204,14 @@ Gruppindelning finns för små respektive större hundar.
 
 <hr>
 
-<h3>🚗 Premium rastning med hämtning hemma</h3>
+<h3>🚗 Premium rastning & aktivering</h3>
 
 <p>
-Vi hämtar din hund hemma runt kl 12 och kör till inhägnade områden där hunden kan springa lös och aktiveras.  
-Perfekt för hundar som är ensamma länge hemma.
+Vår premium rastning är en exklusiv tjänst för dig som vill ge din hund extra kvalitetstid under dagen.
+
+Vi hämtar din hund hemma runt kl 12 och kör till stora inhägnade naturområden där hunden får springa lös, nosa, leka och aktiveras i trygg miljö under uppsikt.
+
+Perfekt för dig som vill ha en smidig lösning utan egen hämtning och lämning och samtidigt ge hunden mer stimulans under dagen.
 </p>
 
 <div class="price">
@@ -234,14 +223,14 @@ Perfekt för hundar som är ensamma länge hemma.
 <h3>🏨 Pensionat</h3>
 
 <p>
-Pensionat är för hundar som behöver sova över när du är bortrest.
+Pensionat är för hundar som behöver sova över hos oss när du reser bort eller inte kan ta med hunden.
 </p>
 
 <p>
 400 kr / dag (mån–fre)<br>
 Lör & Sön – 600 kr / dag<br>
 Aftnar & röda dagar – +400 kr<br>
-Utanför tider – +300 kr
+Hämtning utanför tider – +300 kr
 </p>
 
 <p>50% rabatt på andra hunden.</p>
@@ -269,7 +258,6 @@ height="450">
 </section>
 
 <section id="hittahit">
-
 <h2>Hitta hit</h2>
 
 <div class="card">
@@ -279,8 +267,8 @@ height="450">
 src="https://www.google.com/maps?q=Mossebo+13+54391+Tibro&output=embed"
 height="450">
 </iframe>
-</div>
 
+</div>
 </section>
 
 <section id="kontakt">
@@ -301,11 +289,6 @@ height="450">
 <option>Hane</option>
 <option>Tik</option>
 </select>
-
-<div class="checkbox-row">
-<input type="checkbox" name="kastrerad">
-<label>Kastrerad</label>
-</div>
 
 <textarea name="meddelande" placeholder="Berätta om din hund"></textarea>
 
