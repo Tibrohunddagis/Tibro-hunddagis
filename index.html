@@ -1,258 +1,183 @@
 <!DOCTYPE html>
 <html lang="sv">
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Exklusivt Hundcenter</title>
 
-<title>Tibro Hunddagis | Premium Hunddagis</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 
 <style>
-
-body{
-margin:0;
-font-family:Poppins;
-background:#f5f3ef;
-color:#2d2d2d;
+body {
+    margin:0;
+    font-family:'Inter', sans-serif;
+    background:#f8f6f2;
+    color:#1a1a1a;
 }
 
-header{
-background:linear-gradient(rgba(0,0,0,0.55),rgba(0,0,0,0.55)),
-url('https://images.unsplash.com/photo-1548199973-03cce0bbc87b') center/cover;
-color:white;
-text-align:center;
-padding:130px 20px;
+header {
+    background:#111;
+    color:white;
+    padding:30px;
+    text-align:center;
+    font-family:'Playfair Display', serif;
+    font-size:32px;
+    letter-spacing:1px;
 }
 
-header h1{
-font-family:Playfair Display;
-font-size:52px;
+section {
+    padding:80px 20px;
+    max-width:1100px;
+    margin:auto;
 }
 
-nav{
-background:#1f2c23;
-padding:18px;
-text-align:center;
-position:sticky;
-top:0;
+h2 {
+    font-family:'Playfair Display', serif;
+    font-size:34px;
+    margin-bottom:20px;
 }
 
-nav a{
-color:white;
-margin:20px;
-text-decoration:none;
-font-weight:500;
+.card {
+    background:white;
+    padding:50px;
+    border-radius:16px;
+    box-shadow:0 15px 40px rgba(0,0,0,0.08);
+    margin-bottom:60px;
 }
 
-section{
-max-width:1100px;
-margin:auto;
-padding:80px 20px;
+.price {
+    font-size:26px;
+    font-weight:600;
+    margin-top:15px;
 }
 
-.card{
-background:white;
-padding:40px;
-border-radius:25px;
-box-shadow:0 20px 60px rgba(0,0,0,0.06);
-margin-bottom:50px;
+.premium {
+    background:#111;
+    color:white;
 }
 
-h2{
-font-family:Playfair Display;
-font-size:38px;
-text-align:center;
+.premium .price {
+    color:#d4af37;
 }
 
-.price{
-font-size:20px;
-font-weight:500;
-margin-top:20px;
+footer {
+    background:#111;
+    color:white;
+    padding:40px;
+    text-align:center;
 }
 
-input,textarea{
-width:100%;
-padding:15px;
-margin:10px 0;
-border-radius:12px;
-border:1px solid #ddd;
+a {
+    color:#d4af37;
+    text-decoration:none;
 }
 
-button{
-background:#6b8f71;
-color:white;
-border:none;
-padding:18px;
-width:100%;
-border-radius:35px;
-font-size:16px;
-cursor:pointer;
+.social a {
+    margin:0 15px;
+    font-size:18px;
 }
 
-footer{
-background:#1f2c23;
-color:white;
-text-align:center;
-padding:50px;
-margin-top:80px;
+button {
+    background:#d4af37;
+    border:none;
+    padding:14px 28px;
+    font-weight:600;
+    cursor:pointer;
+    border-radius:30px;
 }
 
-.social{
-color:#2f3e34;
-text-decoration:none;
-font-weight:600;
-margin-right:20px;
+form input, form textarea {
+    width:100%;
+    padding:12px;
+    margin-bottom:15px;
+    border-radius:8px;
+    border:1px solid #ccc;
 }
-
-iframe{
-border-radius:20px;
-}
-
 </style>
-
 </head>
 
 <body>
 
 <header>
-<h1>Tibro Hunddagis</h1>
-<p>Lantligt premiumhunddagis – där hunden får vara hund</p>
+Exklusivt Hundcenter
 </header>
 
-<nav>
-<a href="#om">Om oss</a>
-<a href="#tjanster">Tjänster & Priser</a>
-<a href="#kontakt">Kontakt</a>
-</nav>
-
-<!-- OM OSS -->
-<section id="om">
-
-<h2>Om oss</h2>
+<section>
 
 <div class="card">
-
-<p>
-Vi tror på att främja hundens naturliga beteenden.
-Här får hunden möjlighet att gräva, leka, springa fritt, nosa och utforska i en lugn lantlig miljö.
-</p>
-
-<p>
-Vi erbjuder flera tjänster – hunddagis, pensionat och hämtning hemma.
-Klicka på tjänster för att läsa mer.
-</p>
-
+<h2>Hunddagis</h2>
+<p>Strukturerad daglig omsorg med aktivering, vila och trygg miljö.</p>
+<div class="price">Från 3 200 kr / månad</div>
 </div>
-</section>
 
-<!-- TJÄNSTER -->
-<section id="tjanster">
-
-<h2>Tjänster & Priser</h2>
+<div class="card premium">
+<h2>Premium Aktivering</h2>
+<p>Individanpassad mental och fysisk stimulans med fokus på utveckling och balans.</p>
+<div class="price">650 kr / tillfälle</div>
+</div>
 
 <div class="card">
+<h2>Pensionat</h2>
 
-<h3>🐾 Hunddagis</h3>
-
-<p>
-Strukturerad omsorg, promenader, social aktivering och vila.
-</p>
-
-<div class="price">
-5 dagar/vecka – 3400 kr<br>
-4 dagar/vecka – 3100 kr<br>
-3 dagar/vecka – 2800 kr<br>
-2 dagar/vecka – 2500 kr
-</div>
-
-<hr>
-
-<h3>🚗 Premium hämtning & aktivering</h3>
-
-<p>
-Hemhämtning enligt överenskommelse.  
-Hundarna körs till stora områden där de kan springa fritt.
-</p>
-
-<div class="price">
-5900 kr / månad (max 5 vardagar/vecka)
-</div>
-
-<hr>
-
-<h3>🏨 Pensionat</h3>
-
-<p>
-Pensionat erbjuds helger och lov.
-</p>
+<p>Trygg och lugn vistelse med struktur och kvalitet.</p>
 
 <div class="price">
 400 kr / dag<br>
-Lördag & Söndag: 600 kr / dag<br>
-Aftnar och röda dagar: +400 kr / dag extra<br>
-Utanför öppettider: +300 kr
+Ankomstdag och hemgångsdag räknas som hela dagar.
 </div>
 
-<hr>
+<br>
 
-<p>
-✔ Löptikar accepteras  
-❌ Okastrerade hanhundar på dagis/hemrastning ej tillåtna  
-✔ Okastrerade hanhundar accepteras på pensionat  
-✔ Hundar ska vara vaccinerade och försäkrade  
-✔ Ansvarsförsäkring finns  
-✔ Tillstånd för transport av hundar
-</p>
+<div class="price">
+Lör & Sön: 600 kr / dag
+</div>
+
+<br>
+
+<div class="price">
+Aftnar & röda dagar: +400 kr / dag
+</div>
+
+<br>
+
+<div class="price">
+Uthämtning utanför ordinarie tider: +300 kr
+</div>
 
 </div>
+
 </section>
 
-<!-- INSTAGRAM -->
 <section>
+<h2>Följ oss</h2>
 
-<h2>Vår vardag</h2>
-
-<div class="card">
-<iframe src="https://www.instagram.com/tibrohunddagis/embed"
-width="100%" height="500"></iframe>
+<div class="social">
+<a href="https://www.facebook.com/" target="_blank">Facebook</a>
+<a href="https://www.instagram.com/" target="_blank">Instagram</a>
 </div>
+
+<br><br>
+
+<!-- Instagram Feed -->
+<script src="https://elfsightcdn.com/platform.js" async></script>
+<div class="elfsight-app-REPLACE_WITH_YOUR_WIDGET_ID"></div>
 
 </section>
 
-<!-- KONTAKT -->
-<section id="kontakt">
-
-<h2>Kontakt & Intresseanmälan</h2>
-
-<div class="card">
+<section>
+<h2>Kontakta oss</h2>
 
 <form action="https://formspree.io/f/mnjbgrqb" method="POST">
-
-<input name="namn" placeholder="Ditt namn" required>
-<input name="email" placeholder="E-post" required>
-<input name="telefon" placeholder="Telefonnummer">
-
-<textarea name="meddelande" placeholder="Berätta om din hund"></textarea>
-
-<button>Skicka intresseanmälan</button>
-
+<input type="text" name="name" placeholder="Namn" required>
+<input type="email" name="email" placeholder="E-post" required>
+<textarea name="message" rows="5" placeholder="Meddelande" required></textarea>
+<button type="submit">Skicka</button>
 </form>
-
-</div>
-
-<div class="card">
-<p>
-<a class="social" href="https://facebook.com/tibrohunddagis" target="_blank">Facebook</a>
-<a class="social" href="https://instagram.com/tibrohunddagis" target="_blank">Instagram</a>
-</p>
-</div>
 
 </section>
 
 <footer>
-© 2026 Tibro Hunddagis
+© 2026 Exklusivt Hundcenter
 </footer>
 
 </body>
