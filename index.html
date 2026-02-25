@@ -1,310 +1,426 @@
 <!DOCTYPE html>
 <html lang="sv">
 <head>
-  
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Hunddagis Tibro | Tibro Hunddagis & Pensionat</title>
-
+<meta name="description" content="Hunddagis i Tibro med små grupper, hemmiljö och stora naturhagar. Hundpensionat i Tibro samt premium rastning med hämtning.">
 <link rel="icon" href="/favicon.ico" type="image/x-icon">
-  
+
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
 
 <style>
-body{margin:0;font-family:Poppins;background:#f5f3ef;color:#2d2d2d;}
+:root{
+  --bg:#f5f3ef;
+  --ink:#2d2d2d;
+  --dark:#1f2c23;
+  --brand:#6b8f71;
+  --card:#ffffff;
+  --muted:#444;
+}
 
+body{margin:0;font-family:Poppins;background:var(--bg);color:var(--ink);line-height:1.7;}
 header{
-background:linear-gradient(rgba(0,0,0,0.45),rgba(0,0,0,0.45)),
-url('https://images.unsplash.com/photo-1548199973-03cce0bbc87b') center/cover;
-color:white;
-text-align:center;
-padding:130px 20px;
+  background:linear-gradient(rgba(0,0,0,0.45),rgba(0,0,0,0.45)),
+  url('https://images.unsplash.com/photo-1548199973-03cce0bbc87b') center/cover;
+  color:white;
+  text-align:center;
+  padding:130px 20px;
 }
+header h1{font-family:"Playfair Display";font-size:52px;margin:0;}
+header p{font-size:18px;margin:12px 0 0;}
 
-header h1{
-font-family:Playfair Display;
-font-size:52px;
-margin:0;
+.hero-cta{margin-top:22px;display:flex;gap:12px;justify-content:center;flex-wrap:wrap;}
+.btn{
+  display:inline-block;
+  background:var(--brand);
+  color:white;
+  text-decoration:none;
+  padding:14px 22px;
+  border-radius:35px;
+  font-weight:600;
+  border:0;
 }
+.btn.secondary{background:rgba(255,255,255,0.18);border:1px solid rgba(255,255,255,0.28);}
 
 nav{
-background:#1f2c23;
-padding:18px;
-text-align:center;
-position:sticky;
-top:0;
-z-index:1000;
+  background:var(--dark);
+  padding:18px;
+  text-align:center;
+  position:sticky;
+  top:0;
+  z-index:1000;
 }
+nav a{color:white;margin:20px;text-decoration:none;font-weight:500;}
+nav a:hover{opacity:0.85;}
 
-nav a{
-color:white;
-margin:20px;
-text-decoration:none;
-font-weight:500;
-}
-
-section{
-max-width:1100px;
-margin:auto;
-padding:50px 20px;
-}
-
+section{max-width:1100px;margin:auto;padding:50px 20px;}
 .card{
-background:white;
-padding:40px;
-border-radius:25px;
-box-shadow:0 20px 60px rgba(0,0,0,0.06);
-margin-bottom:30px;
+  background:var(--card);
+  padding:40px;
+  border-radius:25px;
+  box-shadow:0 20px 60px rgba(0,0,0,0.06);
+  margin-bottom:30px;
 }
-
-h2{
-font-family:Playfair Display;
-font-size:38px;
-text-align:center;
-margin-bottom:30px;
-}
-
-h3{
-font-size:28px;
-}
-
-.price{
-font-size:15px;
-font-weight:400;
-margin-top:15px;
-line-height:1.8;
-color:#444;
-}
+h2{font-family:"Playfair Display";font-size:38px;text-align:center;margin-bottom:30px;}
+h3{font-size:28px;margin-top:0;}
+.price{font-size:15px;font-weight:400;margin-top:15px;line-height:1.8;color:var(--muted);}
 
 input,textarea,select{
-width:100%;
-padding:15px;
-margin:10px 0;
-border-radius:12px;
-border:1px solid #ddd;
+  width:100%;
+  padding:15px;
+  margin:10px 0;
+  border-radius:12px;
+  border:1px solid #ddd;
+  font-family:inherit;
 }
-
 button{
-background:#6b8f71;
-color:white;
-border:none;
-padding:18px;
-width:100%;
-border-radius:35px;
-font-size:16px;
-cursor:pointer;
+  background:var(--brand);
+  color:white;
+  border:none;
+  padding:18px;
+  width:100%;
+  border-radius:35px;
+  font-size:16px;
+  cursor:pointer;
 }
+button:hover{opacity:0.92;}
 
 footer{
-background:#1f2c23;
-color:white;
-text-align:center;
-padding:50px;
-margin-top:50px;
+  background:var(--dark);
+  color:white;
+  text-align:center;
+  padding:50px;
+  margin-top:50px;
 }
 
-.social{
-color:#2f3e34;
-text-decoration:none;
-font-weight:600;
-margin-right:20px;
+iframe{border-radius:20px;width:100%;border:0;}
+
+.split{
+  display:grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap:20px;
+  align-items:center;
+}
+@media (max-width: 900px){
+  .split{grid-template-columns:1fr;}
 }
 
-iframe{
-border-radius:20px;
-width:100%;
+/* WHY US */
+.why{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:14px;
 }
+.why .pill{
+  background:#ffffff;
+  border-radius:18px;
+  padding:18px 18px;
+  box-shadow:0 12px 30px rgba(0,0,0,0.05);
+  font-weight:600;
+  text-align:center;
+}
+
+/* Gallery */
+.gallery{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:14px;
+}
+.gallery img{
+  width:100%;
+  height:230px;
+  object-fit:cover;
+  border-radius:18px;
+  display:block;
+}
+
+.kontakt-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:18px;
+}
+@media (max-width: 900px){
+  .kontakt-grid{grid-template-columns:1fr;}
+}
+
+.badge{
+  display:inline-block;
+  background:#e9efe9;
+  color:#24402b;
+  padding:8px 12px;
+  border-radius:999px;
+  font-weight:600;
+  font-size:13px;
+}
+
+.small{font-size:14px;color:#555;}
+hr{border:none;border-top:1px solid #eee;margin:22px 0;}
 </style>
-
 </head>
 
 <body>
 
 <header>
-<h1>Tibro Hunddagis</h1>
-<p>3500m2 inhägnad naturhage för din hund</p>
+  <h1>Tibro Hunddagis</h1>
+  <p>3500m2 inhägnad naturhage för din hund</p>
+
+  <div class="hero-cta">
+    <a class="btn" href="https://wa.me/46766501582">Boka via WhatsApp</a>
+    <a class="btn secondary" href="#kontakt">Skicka intresseanmälan</a>
+  </div>
 </header>
 
 <nav>
-<a href="#hem">Hem</a>
-<a href="#om">Om oss</a>
-<a href="#tjanster">Tjänster</a>
-<a href="#hittahit">Hitta hit</a>
-<a href="#kontakt">Kontakt</a>
+  <a href="#hem">Hem</a>
+  <a href="#om">Om oss</a>
+  <a href="#varfor">Varför välja oss</a>
+  <a href="#tjanster">Tjänster</a>
+  <a href="#galleri">Galleri</a>
+  <a href="#faq">FAQ</a>
+  <a href="#hittahit">Hitta hit</a>
+  <a href="#kontakt">Kontakt</a>
 </nav>
 
 <section id="hem">
-<h2>Hunddagis i Tibro</h2>
+  <h2>Hunddagis i Tibro</h2>
+  <div class="card split">
+    <div>
+      <p><span class="badge">Hundomsorg i Tibro kommun</span></p>
+      <p>Vi erbjuder tre tjänster:</p>
+      <p>
+        🐾 Hunddagis<br>
+        🚗 Premium rastning med hämtning hemma<br>
+        🏨 Pensionat
+      </p>
+      <p>Läs mer under fliken Tjänster.</p>
+      <p class="small">
+        Söker du <strong>hunddagis i Tibro</strong> eller <strong>hundpensionat i Tibro</strong> med trygg rutin, små grupper och naturhage – då är du rätt.
+      </p>
+      <p>
+        <a class="btn" href="https://wa.me/46766501582">Snabb kontakt på WhatsApp</a>
+      </p>
+    </div>
+    <div class="card" style="margin:0;">
+      <h3 style="margin-bottom:8px;">Snabbinfo</h3>
+      <p class="small" style="margin:0;">
+        ✔ Små grupper<br>
+        ✔ Hemmiljö (soffor, sängar, kuddar)<br>
+        ✔ Daglig utevistelse i stora naturhagar<br>
+        ✔ Hämtning & lämning kan erbjudas<br>
+        ✔ Hunddagis i Tibro – fokus på trygghet
+      </p>
+    </div>
+  </div>
+</section>
 
-<div class="card">
-<p>Vi erbjuder tre tjänster:</p>
-
-<p>
-🐾 Hunddagis<br>
-🚗 Premium rastning med hämtning hemma<br>
-🏨 Pensionat
-</p>
-
-<p>Läs mer under fliken Tjänster.</p>
-</div>
+<section id="varfor">
+  <h2>Varför hundägare väljer oss</h2>
+  <div class="why">
+    <div class="pill">Små grupper – inga stora flockar</div>
+    <div class="pill">Boxar/rum med hemmiljö (soffor, sängar, kuddar)</div>
+    <div class="pill">Daglig utevistelse i stora naturhagar</div>
+    <div class="pill">Hämtning och lämning erbjuds</div>
+    <div class="pill">Erfaren personal & vana vid olika raser</div>
+  </div>
 </section>
 
 <section id="om">
-<h2>Om oss</h2>
+  <h2>Om oss</h2>
+  <div class="card">
+    <p>
+      Vi arbetar med hundens naturliga behov. Här får hunden springa fritt, nosa, leka och vistas i
+      lugn lantlig miljö. Hos oss har din hund 2 hagar uppdelat på hela 3500m2.
+    </p>
+    <p>
+      Vi är godkända av Jordbruksverket och har drivit hunddagis med toppbetyg.
+      Se gärna våra Google-recensioner.
+    </p>
+    <p>
+      Vi som driver verksamheten heter Jonathan och Anna.
+      Utbildad hundskötare med egna draghundar.
+      På gården finns även katter och höns.
+    </p>
+    <p class="small"><strong>Godkänt enligt Jordbruksverkets regler för hundhållning.</strong></p>
+    <p class="small">
+      (För dig som googlar: ja – vi är <strong>hunddagis i Tibro</strong> och <strong>hundpensionat i Tibro</strong>, med hundomsorg i Tibro kommun.)
+    </p>
+  </div>
+</section>
 
-<div class="card">
-
-<p>
-Vi arbetar med hundens naturliga behov. Här får hunden springa fritt, nosa, leka och vistas i lugn lantlig miljö. Hos oss har din hund 2 hagar uppdelat på hela 3500m2.
-</p>
-
-<p>
-Vi är godkända av Jordbruksverket och har drivit hunddagis med toppbetyg.  
-Se gärna våra Google-recensioner.
-</p>
-
-<p>
-Vi som driver verksamheten heter Jonathan och Anna.  
-Utbildad hundskötare med egna draghundar.  
-På gården finns även katter och höns.
-</p>
-
-</div>
+<section id="galleri">
+  <h2>Bildgalleri</h2>
+  <div class="card">
+    <p class="small">Tips: Beskär gärna bilderna till liknande format för snyggare känsla.</p>
+    <div class="gallery">
+      <!-- Lägg dina bilder i /images och döp till g1.jpg, g2.jpg... -->
+      <img src="images/g1.jpg" alt="Hunddagis i Tibro - vardag">
+      <img src="images/g2.jpg" alt="Hunddagis i Tibro - lek">
+      <img src="images/g3.jpg" alt="Hundpensionat i Tibro - vila">
+      <img src="images/g4.jpg" alt="Hunddagis Tibro - promenad">
+      <img src="images/g5.jpg" alt="Hundomsorg Tibro kommun">
+      <img src="images/g6.jpg" alt="Hunddagis i Tibro - utevistelse">
+      <img src="images/g7.jpg" alt="Hunddagis Tibro - trygg miljö">
+      <img src="images/g8.jpg" alt="Hunddagis i Tibro - natur">
+      <img src="images/g9.jpg" alt="Hundpensionat i Tibro - hundar">
+      <img src="images/g10.jpg" alt="Hunddagis Tibro - vardag">
+    </div>
+  </div>
 </section>
 
 <section id="tjanster">
+  <h2>Tjänster & Priser</h2>
+  <div class="card">
 
-<h2>Tjänster & Priser</h2>
+    <h3>🐾 Hunddagis</h3>
+    <p>
+      Mån–Fre schema:<br>
+      06-10 Lämning<br>
+      10-12 Rastning<br>
+      12-14 Vila<br>
+      14-15 Rastning<br>
+      15-18 Hämtning
+    </p>
+    <p>Gruppindelning finns för små och stora hundar.</p>
 
-<div class="card">
+    <div class="price">
+      5 dagar/vecka – 3400 kr<br>
+      4 dagar/vecka – 3100 kr<br>
+      3 dagar/vecka – 2800 kr<br>
+      2 dagar/vecka – 2500 kr
+    </div>
 
-<h3>🐾 Hunddagis</h3>
+    <p>❌ Inga okastrerade hanhundar.</p>
+    <p>50% rabatt på hund nummer två om du har två hundar.</p>
 
-<p>
-Mån–Fre schema:<br>
-06-10 Lämning<br>
-10-12 Rastning<br>
-12-14 Vila<br>
-14-15 Rastning<br>
-15-18 Hämtning
-</p>
+    <hr>
 
-<p>
-Gruppindelning finns för små och stora hundar.
-</p>
+    <h3>🚗 Premium rastning med hämtning hemma</h3>
+    <p>
+      Vår premium rastning är en exklusiv tjänst för dig som vill ge din hund extra kvalitetstid
+      under dagen när du jobbar.
+      Vi hämtar din hund hemma runt kl 12 och kör till stora inhägnade naturområden där hunden
+      får springa lös, nosa, leka och aktiveras i trygg miljö under uppsikt.
+      Tjänsten passar perfekt för dig som:
+      • Har en hund som är ensam hemma många timmar
+      • Vill ge din hund extra motion och mental stimulans
+      • Vill ha en smidig lösning utan egen hämtning och lämning
+      Efter aktivering lämnar vi tryggt tillbaka hunden hemma hos dig.
+    </p>
+    <div class="price">
+      5900 kr / månad Du väljer fritt vilka dagar vi ska hämta. (upp till 5 vardagar/vecka, endast mån-fre)
+    </div>
+    <p>50% rabatt på andra hunden om du har två hundar</p>
 
-<div class="price">
-5 dagar/vecka – 3400 kr<br>
-4 dagar/vecka – 3100 kr<br>
-3 dagar/vecka – 2800 kr<br>
-2 dagar/vecka – 2500 kr
-</div>
-<p>❌ Inga okastrerade hanhundar.</p>
-<p>50% rabatt på hund nummer två om du har två hundar.</p>
-<hr>
+    <hr>
 
-<h3>🚗 Premium rastning & aktivering</h3>
+    <h3>🏨 Pensionat</h3>
+    <p>
+      Pensionat är för hundar som behöver sova över hos oss när du reser bort eller inte kan ta
+      med hunden.
+    </p>
+    <p>
+      390 kr / dag (mån–fre)<br>
+      Lör & Sön 590 kr / dag<br>
+      Aftnar & röda dagar 990 kr<br>
+      Hämtning utanför tider 290 kr extra
+    </p>
+    <p>50% rabatt på andra hunden om du har två hundar</p>
 
-<p>
-Vår premium rastning är en exklusiv tjänst för dig som vill ge din hund extra kvalitetstid under dagen när du jobbar.
-
-Vi hämtar din hund hemma runt kl 12 och kör till stora inhägnade naturområden där hunden får springa lös, nosa, leka och aktiveras i trygg miljö under uppsikt.
-
-Tjänsten passar perfekt för dig som:
-• Har en hund som är ensam hemma många timmar  
-• Vill ge din hund extra motion och mental stimulans  
-• Vill ha en smidig lösning utan egen hämtning och lämning  
-
-Efter aktivering lämnar vi tryggt tillbaka hunden hemma hos dig.
-</p>
-
-<div class="price">
-5900 kr / månad Du väljer fritt vilka dagar vi ska hämta. (upp till 5 vardagar/vecka, endast mån-fre)
-</div>
-  
-<p>50% rabatt på andra hunden om du har två hundar</p>
-  
-<hr>
-
-<h3>🏨 Pensionat</h3>
-
-<p>
-Pensionat är för hundar som behöver sova över hos oss när du reser bort eller inte kan ta med hunden.
-</p>
-
-<p>
-390 kr / dag (mån–fre)<br>
-Lör & Sön  590 kr / dag<br>
-Aftnar & röda dagar  990 kr<br>
-Hämtning utanför tider 290 kr extra
-</p>
-
-<p>50% rabatt på andra hunden om du har två hundar</p>
-
-</div>
+    <p class="small">
+      (Sökord för Google: <strong>hundpensionat i Tibro</strong>, <strong>hunddagis i Tibro</strong>, <strong>hundomsorg i Tibro kommun</strong>.)
+    </p>
+  </div>
 </section>
 
 <section>
-<h2>Vår vardag</h2>
-
-<div class="card">
-<iframe src="https://www.instagram.com/tibrohunddagis/embed" height="500"></iframe>
-</div>
+  <h2>Vår vardag</h2>
+  <div class="card">
+    <iframe src="https://www.instagram.com/tibrohunddagis/embed" height="500"></iframe>
+  </div>
 </section>
 
 <section>
-<h2>Google recensioner</h2>
+  <h2>Google recensioner</h2>
+  <!-- Elfsight Google Reviews | Untitled Google Reviews -->
+  <script src="https://elfsightcdn.com/platform.js" async></script>
+  <div class="elfsight-app-5af7f710-6ed7-4382-a7e2-b071ab3f1c73" data-elfsight-app-lazy></div>
+</section>
 
-<!-- Elfsight Google Reviews | Untitled Google Reviews -->
-<script src="https://elfsightcdn.com/platform.js" async></script>
-<div class="elfsight-app-5af7f710-6ed7-4382-a7e2-b071ab3f1c73" data-elfsight-app-lazy></div>
+<section id="faq">
+  <h2>FAQ</h2>
+  <div class="card">
+    <h3>Måste hanhunden vara kastrerad?</h3>
+    <p>Ja på hunddagiset tar vi inte emot okastrerade hanhundar. Men på pensionatet tar vi emot alla hundar.</p>
+
+    <h3>Krävs vaccination?</h3>
+    <p>Ja det är obligatoriskt, samt försäkring.</p>
+
+    <h3>Hur stora grupper?</h3>
+    <p>Ca 3-6 hundar per grupp ute. I sitt egna rum -1-3 hundarkompisar.</p>
+
+    <h3>Hur fungerar hämtning?</h3>
+    <p>Du lämnar mellan 06-10 och hämtar mellan 14-18. Det kan komma olika tider varje dag.</p>
+
+    <h3>Kan man ha enstaka dagar?</h3>
+    <p>På pensionatet ja. På hunddagiset kan du komma minst 1 dag/ vecka.</p>
+
+    <h3>Tar ni problemhundar?</h3>
+    <p>
+      Det beror på vilket “problem” hunden har. Vi har haft många hundar som aldrig haft en hundgodis innan,
+      eller varit rädd och skallig mot andra hundar. Dom är välkomna och kommer utvecklas och få en helt nytt
+      ljus i livet.
+    </p>
+
+    <p class="small">
+      (Detta hjälper även lokal SEO: hunddagis i Tibro, hundpensionat i Tibro, hundomsorg i Tibro kommun.)
+    </p>
+  </div>
+</section>
 
 <section id="hittahit">
-<h2>Hitta hit</h2>
-
-<div class="card">
-<p><strong>Mossebo 13, 543 91 Tibro</strong></p>
-
-<iframe 
-src="https://www.google.com/maps?q=Mossebo+13+54391+Tibro&output=embed"
-height="450">
-</iframe>
-
-</div>
+  <h2>Hitta hit</h2>
+  <div class="card">
+    <p><strong>Mossebo 13, 543 91 Tibro</strong></p>
+    <iframe src="https://www.google.com/maps?q=Mossebo+13+54391+Tibro&output=embed" height="450"></iframe>
+  </div>
 </section>
 
 <section id="kontakt">
+  <h2>Kontakt & Intresseanmälan</h2>
 
-<h2>Kontakt & Intresseanmälan</h2>
+  <div class="kontakt-grid">
+    <div class="card">
+      <h3>Kontakt</h3>
+      <p><strong>Telefon:</strong> <a href="tel:+46766501582" style="color:#1f2c23;font-weight:600;text-decoration:none;">076-650 15 82</a></p>
+      <p><strong>WhatsApp:</strong> <a href="https://wa.me/46766501582" style="color:#1f2c23;font-weight:600;text-decoration:none;">Starta chatt</a></p>
+      <p><strong>Adress:</strong> Mossebo 13, 543 91 Tibro</p>
+      <p><strong>Öppettider:</strong> Lämning 06–10 • Hämtning 14–18</p>
+      <p><a class="btn" href="https://wa.me/46766501582">Boka via WhatsApp</a></p>
+      <p class="small"><strong>Hunddagis i Tibro</strong> • <strong>Hundpensionat i Tibro</strong> • Hundomsorg i Tibro kommun</p>
+    </div>
 
-<div class="card">
-
-<form action="https://formspree.io/f/mnjbgrqb" method="POST">
-
-<input name="namn" placeholder="Ditt namn" required>
-<input name="email" placeholder="E-post" required>
-<input name="telefon" placeholder="Telefonnummer">
-<input name="ras" placeholder="Hundens ras">
-
-<select name="kon">
-<option>Kön</option>
-<option>Hane</option>
-<option>Tik</option>
-</select>
-
-<textarea name="meddelande" placeholder="Berätta om din hund"></textarea>
-
-<button>Skicka intresseanmälan</button>
-
-</form>
-
-</div>
-
+    <div class="card">
+      <h3>Skicka intresseanmälan</h3>
+      <form action="https://formspree.io/f/mnjbgrqb" method="POST">
+        <input name="namn" placeholder="Ditt namn" required>
+        <input name="email" placeholder="E-post" required>
+        <input name="telefon" placeholder="Telefonnummer">
+        <input name="ras" placeholder="Hundens ras">
+        <select name="kon">
+          <option>Kön</option>
+          <option>Hane</option>
+          <option>Tik</option>
+        </select>
+        <textarea name="meddelande" placeholder="Berätta om din hund"></textarea>
+        <button>Skicka intresseanmälan</button>
+      </form>
+    </div>
+  </div>
 </section>
 
 <footer>
-© 2026 Tibro Hunddagis
+  © 2026 Tibro Hunddagis • Hunddagis i Tibro • Hundpensionat i Tibro • Godkänt enligt Jordbruksverkets regler för hundhållning
 </footer>
 
 </body>
