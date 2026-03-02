@@ -384,19 +384,28 @@ hr{border:none;border-top:1px solid #eee;margin:22px 0;}
 
     <div class="card">
       <h3>Skicka intresseanmälan</h3>
-      <form action="https://formspree.io/f/mnjbgrqb" method="POST">
-        <input name="namn" placeholder="Ditt namn" required>
-        <input name="email" placeholder="E-post" required>
-        <input name="telefon" placeholder="Telefonnummer">
-        <input name="ras" placeholder="Hundens ras">
-        <select name="kon">
-          <option>Kön</option>
-          <option>Hane</option>
-          <option>Tik</option>
-        </select>
-        <textarea name="meddelande" placeholder="Berätta om din hund"></textarea>
-        <button>Skicka intresseanmälan</button>
-      </form>
+<form action="https://formspree.io/f/mvzbjpaj" method="POST">
+
+<input type="text" name="namn" placeholder="Ditt namn" required>
+
+<input type="tel" name="telefon" placeholder="Telefonnummer" required>
+
+<input type="email" name="email" placeholder="E-postadress" required>
+
+<input type="text" name="ras" placeholder="Hundens ras">
+
+<label>Kön på hund</label>
+<select name="kon" required>
+  <option value="">Välj</option>
+  <option value="Tik">Tik</option>
+  <option value="Hane">Hane</option>
+</select>
+
+<textarea name="meddelande" rows="5" placeholder="Berätta om din hund och vad du söker..."></textarea>
+
+<button type="submit">Skicka intresseanmälan</button>
+
+</form>
     </div>
   </div>
 </section>
