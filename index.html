@@ -358,7 +358,87 @@ hr{border:none;border-top:1px solid #eee;margin:22px 0;}
 
 <section>
   <h2>Google recensioner</h2>
-  <div class="card">
+  <section class="reviews-section">
+  <div class="reviews-slider">
+    <div class="slides">
+      <img src="1_Google_Reviews.png" class="slide active">
+      <img src="2_Sara_Garvander.png" class="slide">
+      <img src="3_Billy_Gronlund.png" class="slide">
+      <img src="4_Anita_Persson.png" class="slide">
+    </div>
+
+    <button class="prev">&#10094;</button>
+    <button class="next">&#10095;</button>
+  </div>
+</section>
+
+<style>
+.reviews-section {
+  padding: 60px 20px;
+  background: #f9f9f9;
+  text-align: center;
+}
+
+.reviews-slider {
+  position: relative;
+  max-width: 700px;
+  margin: auto;
+  overflow: hidden;
+}
+
+.slide {
+  width: 100%;
+  display: none;
+  border-radius: 12px;
+}
+
+.slide.active {
+  display: block;
+}
+
+.prev, .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.5);
+  color: white;
+  border: none;
+  padding: 10px 14px;
+  cursor: pointer;
+  font-size: 18px;
+  border-radius: 50%;
+}
+
+.prev { left: 10px; }
+.next { right: 10px; }
+
+.prev:hover, .next:hover {
+  background: rgba(0,0,0,0.8);
+}
+</style>
+
+<script>
+let slides = document.querySelectorAll(".slide");
+let index = 0;
+
+function showSlide(i) {
+  slides.forEach(slide => slide.classList.remove("active"));
+  slides[i].classList.add("active");
+}
+
+document.querySelector(".next").addEventListener("click", function() {
+  index = (index + 1) % slides.length;
+  showSlide(index);
+});
+
+document.querySelector(".prev").addEventListener("click", function() {
+  index = (index - 1 + slides.length) % slides.length;
+  showSlide(index);
+});
+</script>
+
+<section id="hittahit">
+   <div class="card">
     <iframe 
       src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12227.222446362872!2d14.118094830615425!3d58.433254748309686!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x465ba9575dfbd113%3A0x6ba7e5280f6987d8!2sTibro%20Hunddagis!5e1!3m2!1ssv!2sse!4v1772474746301!5m2!1ssv!2sse"
       height="500"
@@ -368,15 +448,7 @@ hr{border:none;border-top:1px solid #eee;margin:22px 0;}
     </iframe>
   </div>
 </section>
-
-<section id="hittahit">
-  <h2>Hitta hit</h2>
-  <div class="card">
-    <p><strong>Mossebo 13, 543 91 Tibro</strong></p>
-    <iframe src="https://www.google.com/maps?q=Mossebo+13+54391+Tibro&output=embed" height="450"></iframe>
-  </div>
-</section>
-
+  
 <section id="kontakt">
   <h2>Kontakt & Intresseanmälan</h2>
 
