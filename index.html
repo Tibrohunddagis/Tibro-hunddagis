@@ -359,18 +359,106 @@ hr{border:none;border-top:1px solid #eee;margin:22px 0;}
 <section>
   <h2>Google recensioner</h2>
   <section class="reviews-section">
-  <div class="reviews-slider">
-    <div class="slides">
-      <img src="1_Google_Reviews.png" class="slide active">
-      <img src="2_Sara_Garvander.png" class="slide">
+
+  <!-- Google header ovanför -->
+  <div class="google-header">
+    <img src="1_Google_Reviews.png" alt="Google Reviews">
+  </div>
+
+  <!-- Slider -->
+  <div class="reviews-wrapper">
+    <button class="prev">&#10094;</button>
+
+    <div class="reviews-slider">
+      <img src="2_Sara_Garvander.png" class="slide active">
       <img src="3_Billy_Gronlund.png" class="slide">
       <img src="4_Anita_Persson.png" class="slide">
     </div>
 
-    <button class="prev">&#10094;</button>
     <button class="next">&#10095;</button>
   </div>
+
 </section>
+
+<style>
+.reviews-section {
+  padding: 60px 20px;
+  background: #f9f9f9;
+  text-align: center;
+}
+
+.google-header img {
+  max-width: 300px;
+  margin-bottom: 30px;
+}
+
+.reviews-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.reviews-slider {
+  max-width: 650px;
+  width: 100%;
+}
+
+.slide {
+  width: 100%;
+  display: none;
+  border-radius: 12px;
+}
+
+.slide.active {
+  display: block;
+}
+
+.prev, .next {
+  background: #222;
+  color: white;
+  border: none;
+  padding: 12px 16px;
+  cursor: pointer;
+  font-size: 20px;
+  border-radius: 6px;
+}
+
+.prev:hover, .next:hover {
+  background: #000;
+}
+
+/* Mobil */
+@media (max-width: 768px) {
+  .reviews-wrapper {
+    flex-direction: column;
+  }
+
+  .prev, .next {
+    width: 100%;
+  }
+}
+</style>
+
+<script>
+let slides = document.querySelectorAll(".slide");
+let index = 0;
+
+function showSlide(i) {
+  slides.forEach(slide => slide.classList.remove("active"));
+  slides[i].classList.add("active");
+}
+
+document.querySelector(".next").addEventListener("click", function() {
+  index = (index + 1) % slides.length;
+  showSlide(index);
+});
+
+document.querySelector(".prev").addEventListener("click", function() {
+  index = (index - 1 + slides.length) % slides.length;
+  showSlide(index);
+});
+</script>
 
 <style>
 .reviews-section {
