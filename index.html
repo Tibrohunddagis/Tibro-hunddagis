@@ -441,22 +441,26 @@ hr{border:none;border-top:1px solid #eee;margin:22px 0;}
 </style>
 
 <script>
-let slides = document.querySelectorAll(".slide");
-let index = 0;
+document.addEventListener("DOMContentLoaded", function() {
 
-function showSlide(i) {
-  slides.forEach(slide => slide.classList.remove("active"));
-  slides[i].classList.add("active");
-}
+  const slides = document.querySelectorAll(".slide");
+  let index = 0;
 
-document.querySelector(".next").addEventListener("click", function() {
-  index = (index + 1) % slides.length;
-  showSlide(index);
-});
+  function showSlide(i) {
+    slides.forEach(slide => slide.classList.remove("active"));
+    slides[i].classList.add("active");
+  }
 
-document.querySelector(".prev").addEventListener("click", function() {
-  index = (index - 1 + slides.length) % slides.length;
-  showSlide(index);
+  document.querySelector(".next").addEventListener("click", function() {
+    index = (index + 1) % slides.length;
+    showSlide(index);
+  });
+
+  document.querySelector(".prev").addEventListener("click", function() {
+    index = (index - 1 + slides.length) % slides.length;
+    showSlide(index);
+  });
+
 });
 </script>
 
